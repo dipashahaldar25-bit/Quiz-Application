@@ -1,0 +1,373 @@
+{
+  "quizMeta": {
+    "title": "Computer Science Fundamentals",
+    "description": "Challenge your knowledge across core Computer Science domains: Algorithms, Data Structures, Operating Systems, Computer Networks, Databases, and Architecture.",
+    "topic": "Computer Science",
+    "difficulty": "Intermediate",
+    "totalQuestions": 30,
+    "timePerQuestion": 30,
+    "passingPercentage": 60
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the worst-case time complexity of finding an element in a sorted array using Binary Search?",
+      "options": [
+        { "id": "a", "text": "O(1)" },
+        { "id": "b", "text": "O(log n)" },
+        { "id": "c", "text": "O(n)" },
+        { "id": "d", "text": "O(n log n)" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Binary search repeatedly divides the search space in half at each comparison. For an array of size n, at most log2(n) steps are required to find the target element or conclude it is not present, giving a worst-case time complexity of O(log n)."
+    },
+    {
+      "id": 2,
+      "question": "Which data structure operates on a Last-In, First-Out (LIFO) principle and is commonly utilized for function call management and recursion backtracking?",
+      "options": [
+        { "id": "a", "text": "Queue" },
+        { "id": "b", "text": "Stack" },
+        { "id": "c", "text": "Binary Heap" },
+        { "id": "d", "text": "Doubly Linked List" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A Stack is a LIFO (Last-In, First-Out) data structure where elements are inserted and removed from the same end (the top). Operating systems and language runtimes use call stacks to manage function invocation frames, return addresses, and local variables."
+    },
+    {
+      "id": 3,
+      "question": "In hash table implementations, what is the collision resolution technique where multiple elements that hash to the exact same bucket index are stored in a linked list at that index?",
+      "options": [
+        { "id": "a", "text": "Separate Chaining" },
+        { "id": "b", "text": "Linear Probing" },
+        { "id": "c", "text": "Quadratic Probing" },
+        { "id": "d", "text": "Double Hashing" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Separate Chaining resolves hash collisions by maintaining a linked list (or other dynamic container) of key-value pairs at each hash bucket index. In contrast, Linear Probing, Quadratic Probing, and Double Hashing are open-addressing schemes that search for alternative slots in the array."
+    },
+    {
+      "id": 4,
+      "question": "In modern operating systems, what is the primary distinction between a process and a thread?",
+      "options": [
+        { "id": "a", "text": "Processes share memory space with each other by default, while threads have isolated address spaces" },
+        { "id": "b", "text": "A thread has its own isolated virtual address space, file descriptors, and security tokens" },
+        { "id": "c", "text": "Threads belonging to the same process share that process's address space and heap, but maintain their own call stacks and registers" },
+        { "id": "d", "text": "Threads can only be scheduled on a single CPU core, whereas processes can utilize multiple cores" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A process is an independent execution unit with its own virtual address space, file descriptors, and resources. Threads are lightweight execution units within a process; they share the parent process's memory space, global variables, and open files, but keep individual program counters, registers, and stack frames."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is NOT one of the four necessary Coffman conditions required for a deadlock to occur in an operating system?",
+      "options": [
+        { "id": "a", "text": "Mutual Exclusion" },
+        { "id": "b", "text": "Hold and Wait" },
+        { "id": "c", "text": "Preemptive Resource Allocation" },
+        { "id": "d", "text": "Circular Wait" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The four Coffman conditions for deadlock are: Mutual Exclusion, Hold and Wait, No Preemption (resources cannot be forcibly taken away), and Circular Wait. Preemptive resource allocation actually breaks the deadlock condition by forcibly revoking resources from waiting processes."
+    },
+    {
+      "id": 6,
+      "question": "In relational database transactions, which ACID property guarantees that once a transaction has committed, its changes survive system crashes or power failures?",
+      "options": [
+        { "id": "a", "text": "Atomicity" },
+        { "id": "b", "text": "Consistency" },
+        { "id": "c", "text": "Isolation" },
+        { "id": "d", "text": "Durability" }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Durability ensures that once a transaction commits, its modifications are permanently recorded in non-volatile storage (such as via write-ahead logging or disk commits) and will persist even in the event of an immediate system crash or power outage."
+    },
+    {
+      "id": 7,
+      "question": "In the 7-layer OSI reference model, which layer is responsible for end-to-end communication, flow control, error recovery, and segmentation (e.g., TCP and UDP)?",
+      "options": [
+        { "id": "a", "text": "Data Link Layer (Layer 2)" },
+        { "id": "b", "text": "Network Layer (Layer 3)" },
+        { "id": "c", "text": "Transport Layer (Layer 4)" },
+        { "id": "d", "text": "Session Layer (Layer 5)" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Layer 4, the Transport Layer, delivers data between host applications with end-to-end reliability, sequence control, flow control, and port multiplexing. TCP and UDP operate at this layer. The Network Layer (Layer 3) handles routing across intermediate networks (IP), and Data Link (Layer 2) handles frame transmission across local links."
+    },
+    {
+      "id": 8,
+      "question": "What is the correct sequence of control packets exchanged to establish a reliable TCP connection?",
+      "options": [
+        { "id": "a", "text": "ACK -> SYN -> ACK" },
+        { "id": "b", "text": "SYN -> SYN-ACK -> ACK" },
+        { "id": "c", "text": "SYN -> ACK-FIN -> ACK" },
+        { "id": "d", "text": "FIN -> FIN-ACK -> ACK" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "TCP establishes a connection via a 3-way handshake: 1) The client sends a SYN packet with an initial sequence number. 2) The server responds with SYN-ACK, acknowledging the client's sequence number and providing its own. 3) The client responds with ACK, acknowledging the server's sequence number."
+    },
+    {
+      "id": 9,
+      "question": "What does it mean for a sorting algorithm to be classified as 'stable'?",
+      "options": [
+        { "id": "a", "text": "It guarantees O(n log n) runtime in the worst case" },
+        { "id": "b", "text": "It executes entirely in-place with O(1) auxiliary space" },
+        { "id": "c", "text": "It preserves the relative order of elements that possess equal keys" },
+        { "id": "d", "text": "It does not throw runtime exceptions on null or unexpected values" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A sorting algorithm is stable if two elements with equal keys maintain the same relative order in the sorted output as they had in the original input. Merge Sort and Insertion Sort are stable, whereas standard Quick Sort and Heap Sort are unstable by default."
+    },
+    {
+      "id": 10,
+      "question": "What is the worst-case time complexity for lookup, insertion, and deletion operations in a balanced Binary Search Tree (such as an AVL or Red-Black Tree) containing n nodes?",
+      "options": [
+        { "id": "a", "text": "O(1)" },
+        { "id": "b", "text": "O(log n)" },
+        { "id": "c", "text": "O(n)" },
+        { "id": "d", "text": "O(n^2)" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Balanced Binary Search Trees enforce height-balancing invariants via rotations, ensuring the tree height is strictly bounded by O(log n). Since search, insert, and delete all traverse a single root-to-leaf path, their worst-case time complexity is O(log n)."
+    },
+    {
+      "id": 11,
+      "question": "What triggers a 'Page Fault' in an operating system that utilizes virtual memory?",
+      "options": [
+        { "id": "a", "text": "A physical RAM chip experiences a hardware parity failure" },
+        { "id": "b", "text": "A running process attempts to access a virtual memory address whose page is currently not mapped into physical RAM" },
+        { "id": "c", "text": "A program exceeds its allocated stack size causing a stack overflow" },
+        { "id": "d", "text": "Two processes attempt to write to the same shared memory location simultaneously" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A page fault is a hardware interrupt triggered by the Memory Management Unit (MMU) when a program accesses a virtual page marked invalid in the page table. The OS catches this exception, retrieves the page from secondary storage (swap/disk), and loads it into a physical RAM frame."
+    },
+    {
+      "id": 12,
+      "question": "Which graph traversal algorithm guarantees finding the shortest path (in terms of minimum number of edges) between two nodes in an unweighted graph?",
+      "options": [
+        { "id": "a", "text": "Depth-First Search (DFS)" },
+        { "id": "b", "text": "Breadth-First Search (BFS)" },
+        { "id": "c", "text": "Pre-order Tree Traversal" },
+        { "id": "d", "text": "Kruskal's Algorithm" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Breadth-First Search (BFS) explores vertices level-by-level using a FIFO queue. Because it visits all vertices at distance k before visiting any vertex at distance k + 1, the first time it reaches a target node in an unweighted graph is guaranteed to be via the minimum number of edges."
+    },
+    {
+      "id": 13,
+      "question": "What is the primary purpose of the Domain Name System (DNS) on the Internet?",
+      "options": [
+        { "id": "a", "text": "To securely encrypt HTTP payloads between browser and server" },
+        { "id": "b", "text": "To translate human-readable domain names (e.g., example.com) into numerical IP addresses" },
+        { "id": "c", "text": "To assign hardware MAC addresses to local network interfaces" },
+        { "id": "d", "text": "To allocate port numbers to web servers dynamically" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The Domain Name System (DNS) is the hierarchical distributed naming system that translates human-friendly domain names (like 'github.com') into machine-routable IP addresses (like '140.82.121.4' or IPv6 addresses) so routers can direct traffic across the Internet."
+    },
+    {
+      "id": 14,
+      "question": "In relational database design, what requirement must a relation satisfy to be in Third Normal Form (3NF)?",
+      "options": [
+        { "id": "a", "text": "All columns must contain atomic values and no repeating groups" },
+        { "id": "b", "text": "It must be in 1NF and have no partial dependencies on a composite primary key" },
+        { "id": "c", "text": "It must be in 2NF and have no transitive functional dependencies of non-prime attributes on the primary key" },
+        { "id": "d", "text": "Every non-trivial functional dependency X -> Y must have X as a superkey (BCNF)" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A relation is in Third Normal Form (3NF) if it is in 2NF and every non-prime attribute is directly dependent solely on the primary key (no transitive dependencies of non-key attributes on other non-key attributes)."
+    },
+    {
+      "id": 15,
+      "question": "Which level of CPU cache is typically the fastest, smallest in capacity, and located directly inside each individual CPU core?",
+      "options": [
+        { "id": "a", "text": "L1 Cache" },
+        { "id": "b", "text": "L2 Cache" },
+        { "id": "c", "text": "L3 Cache" },
+        { "id": "d", "text": "Disk Cache" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Level 1 (L1) cache is placed directly next to the CPU execution pipeline, running at the full processor clock speed with minimal latency (often 1-4 clock cycles). Because of silicon footprint and heat constraints, it is relatively small (typically 32KB-64KB per core), followed by larger L2 and shared L3 caches."
+    },
+    {
+      "id": 16,
+      "question": "Which of the following lists asymptotic time complexity classes in order from fastest growth (slowest algorithm) to slowest growth (fastest algorithm)?",
+      "options": [
+        { "id": "a", "text": "O(1) < O(log n) < O(n) < O(n^2) < O(2^n)" },
+        { "id": "b", "text": "O(2^n) > O(n^2) > O(n log n) > O(n) > O(1)" },
+        { "id": "c", "text": "O(n!) < O(2^n) < O(n^2) < O(n) < O(1)" },
+        { "id": "d", "text": "O(log n) > O(1) > O(n) > O(n log n) > O(n^2)" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The order of growth rate from highest (slowest execution) to lowest (fastest execution) is: Exponential O(2^n) > Quadratic O(n^2) > Linearithmic O(n log n) > Linear O(n) > Constant O(1)."
+    },
+    {
+      "id": 17,
+      "question": "When an HTTP client requests a protected resource without supplying valid authentication credentials, which HTTP response status code should the server return?",
+      "options": [
+        { "id": "a", "text": "400 Bad Request" },
+        { "id": "b", "text": "401 Unauthorized" },
+        { "id": "c", "text": "403 Forbidden" },
+        { "id": "d", "text": "404 Not Found" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "HTTP 401 Unauthorized indicates that the request lacks valid authentication credentials. In contrast, 403 Forbidden indicates that the server understands the client's identity but refuses permission to access the resource."
+    },
+    {
+      "id": 18,
+      "question": "In a binary Max-Heap containing n elements, what is the time complexity to retrieve the maximum element, and to remove the maximum element, respectively?",
+      "options": [
+        { "id": "a", "text": "O(1) to retrieve, O(log n) to remove" },
+        { "id": "b", "text": "O(log n) to retrieve, O(n) to remove" },
+        { "id": "c", "text": "O(1) to retrieve, O(1) to remove" },
+        { "id": "d", "text": "O(n) to retrieve, O(log n) to remove" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "In a Max-Heap, the maximum element is always situated at the root node, allowing retrieval (peek) in O(1) time. Removing the root requires swapping it with the last leaf and running heapify (bubbling down), which takes O(log n) time proportional to the heap height."
+    },
+    {
+      "id": 19,
+      "question": "What two key properties must an algorithmic problem exhibit to be effectively solvable using Dynamic Programming?",
+      "options": [
+        { "id": "a", "text": "Greedy choice property and deterministic sorting" },
+        { "id": "b", "text": "Optimal substructure and overlapping subproblems" },
+        { "id": "c", "text": "Divide-and-conquer independence and logarithmic height" },
+        { "id": "d", "text": "Non-recursive branching and linear constraints" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Dynamic Programming applies to problems with: 1) Optimal Substructure (an optimal solution to the problem contains optimal solutions to its subproblems), and 2) Overlapping Subproblems (the same subproblems are encountered repeatedly during computation, allowing results to be cached via memoization or tabulation)."
+    },
+    {
+      "id": 20,
+      "question": "What is a defining characteristic of the classic Von Neumann computer architecture?",
+      "options": [
+        { "id": "a", "text": "Separate physical buses and memory modules for instructions and data" },
+        { "id": "b", "text": "Instructions and data share the same unified memory space and system bus" },
+        { "id": "c", "text": "Complete absence of an Arithmetic Logic Unit (ALU)" },
+        { "id": "d", "text": "Only analog signals are used for arithmetic operations" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The Von Neumann architecture stores both program instructions and program data in the same unified memory space, accessed over a shared bus. In contrast, the Harvard architecture maintains physically separate storage and signal pathways for instructions versus data."
+    },
+    {
+      "id": 21,
+      "question": "On a little-endian computer architecture (such as x86-64), how is the 32-bit integer 0x12345678 stored in sequential memory addresses starting at byte offset 0?",
+      "options": [
+        { "id": "a", "text": "[0x12, 0x34, 0x56, 0x78]" },
+        { "id": "b", "text": "[0x78, 0x56, 0x34, 0x12]" },
+        { "id": "c", "text": "[0x34, 0x12, 0x78, 0x56]" },
+        { "id": "d", "text": "[0x78, 0x12, 0x56, 0x34]" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Little-endian format stores the least significant byte (LSB, 0x78) at the lowest memory address (offset 0), followed by 0x56, 0x34, and 0x12. Big-endian architectures store the most significant byte (0x12) first."
+    },
+    {
+      "id": 22,
+      "question": "Why are B-Trees (and B+Trees) predominantly favored over balanced binary search trees (like Red-Black Trees) for database table indexing on disk?",
+      "options": [
+        { "id": "a", "text": "B-Trees require zero memory allocations during insertion" },
+        { "id": "b", "text": "B-Trees have high fan-out (branching factor), drastically reducing disk I/O operations by keeping tree height low" },
+        { "id": "c", "text": "B-Trees can only store numeric keys and do not support range scans" },
+        { "id": "d", "text": "Binary search trees cannot be represented in non-volatile storage" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Secondary storage (disks and SSDs) reads data in large block pages (e.g. 4KB-16KB). B-Trees and B+Trees store hundreds of keys per node (high fan-out), making the tree very shallow (typically height 3 or 4 for millions of records), which minimizes costly disk I/O seek operations."
+    },
+    {
+      "id": 23,
+      "question": "In computational complexity theory, what does the complexity class 'NP' formally represent?",
+      "options": [
+        { "id": "a", "text": "Problems that are 'Non-Polynomial' and can never be solved by any computer" },
+        { "id": "b", "text": "Decision problems whose candidate solutions can be verified in polynomial time by a deterministic Turing machine" },
+        { "id": "c", "text": "Problems that can only be solved using non-deterministic quantum supercomputers" },
+        { "id": "d", "text": "Problems whose running time is strictly bounded by O(n!)" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "NP stands for 'Nondeterministic Polynomial time'. It is the set of decision problems for which a candidate solution (certificate) can be verified in polynomial time by a deterministic algorithm. Whether all problems whose solutions can be quickly verified can also be quickly solved (P = NP) remains an open millennium prize problem."
+    },
+    {
+      "id": 24,
+      "question": "According to the Single Responsibility Principle (SRP) in software engineering, what should be the guideline for a class or module?",
+      "options": [
+        { "id": "a", "text": "A class should have only one function with fewer than 50 lines of code" },
+        { "id": "b", "text": "A module should have one, and only one, reason to change (serving a single actor/responsibility)" },
+        { "id": "c", "text": "Every class must implement an interface containing a single method" },
+        { "id": "d", "text": "A project should only have a single global state object" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The Single Responsibility Principle states that a class or module should have only one reason to change, meaning it encapsulates a single cohesive area of functionality and answers to a single stakeholder or actor."
+    },
+    {
+      "id": 25,
+      "question": "How does memory allocation on the 'Stack' differ from allocation on the 'Heap' in modern programs?",
+      "options": [
+        { "id": "a", "text": "Heap allocations are automatically deallocated when a function returns, while Stack memory must be freed manually" },
+        { "id": "b", "text": "Stack memory allocation is fast and strictly managed in LIFO order via the stack pointer, whereas Heap allocation supports dynamic, arbitrary-lifetime memory with higher allocation overhead" },
+        { "id": "c", "text": "The Stack is dynamically resizable without upper bounds, whereas the Heap has a fixed size of 1MB" },
+        { "id": "d", "text": "Heap memory is private to each thread, whereas Stack memory is globally shared across all threads" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Stack allocation merely increments/decrements the CPU stack pointer register, allocating memory for local variables with strict LIFO lifetimes that end when their function returns. Heap allocation provides dynamically sized memory blocks with arbitrary lifetimes that persist until explicitly freed or garbage-collected."
+    },
+    {
+      "id": 26,
+      "question": "In SQL, which JOIN type returns all records from the left table and the matched records from the right table, filling with NULL on the right side if there is no match?",
+      "options": [
+        { "id": "a", "text": "INNER JOIN" },
+        { "id": "b", "text": "LEFT OUTER JOIN" },
+        { "id": "c", "text": "CROSS JOIN" },
+        { "id": "d", "text": "RIGHT OUTER JOIN" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A LEFT OUTER JOIN (or LEFT JOIN) preserves all rows from the left table regardless of whether there is a match in the right table. For rows without a corresponding match, all columns from the right table are populated with NULL values."
+    },
+    {
+      "id": 27,
+      "question": "In a directed graph, which algorithm or technique is commonly used to perform topological sorting and detect the presence of cycles?",
+      "options": [
+        { "id": "a", "text": "Kahn's Algorithm (in-degree tracking) or Depth-First Search with back-edge detection" },
+        { "id": "b", "text": "Prim's Minimum Spanning Tree algorithm" },
+        { "id": "c", "text": "Dijkstra's Single-Source Shortest Path algorithm" },
+        { "id": "d", "text": "Floyd-Warshall all-pairs shortest path algorithm" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Topological sorting orders vertices in a Directed Acyclic Graph (DAG) such that every directed edge u -> v has u preceding v. Kahn's algorithm (using queue and vertex in-degrees) or DFS (tracking visited/ancestor recursion stack to identify back-edges) can find the ordering and detect cycles."
+    },
+    {
+      "id": 28,
+      "question": "What is the primary difference in execution strategy between an ahead-of-time (AOT) compiler and an interpreter?",
+      "options": [
+        { "id": "a", "text": "An AOT compiler translates high-level source code into native machine code prior to execution, whereas an interpreter translates and executes instructions on-the-fly at runtime" },
+        { "id": "b", "text": "Interpreters produce standalone executable binary files, whereas compilers run code line-by-line in memory" },
+        { "id": "c", "text": "Compilers cannot detect syntax errors, whereas interpreters catch all runtime bugs at compile time" },
+        { "id": "d", "text": "An interpreter always produces code that executes orders of magnitude faster than compiled code" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "An ahead-of-time (AOT) compiler translates entire source programs into machine instructions or bytecodes before running them, enabling deep global optimizations. An interpreter directly parses and evaluates program statements or intermediate bytecodes step-by-step during runtime."
+    },
+    {
+      "id": 29,
+      "question": "How does the classic 'Mark-and-Sweep' garbage collection algorithm reclaim unreachable memory?",
+      "options": [
+        { "id": "a", "text": "It maintains an integer counter for every object and deletes it when the counter hits zero" },
+        { "id": "b", "text": "It starts from root references, traverses and marks all reachable objects, then sweeps through the heap freeing unmarked memory" },
+        { "id": "c", "text": "It immediately halts and crashes the application when memory utilization reaches 100%" },
+        { "id": "d", "text": "It forces the programmer to insert manual free() statements at runtime" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Mark-and-Sweep begins from root references (stack frames, globals, registers) and traverses the object graph to mark all reachable memory (Mark phase). It then iterates across the entire heap, reclaiming memory from any unreferenced and unmarked objects (Sweep phase), naturally handling cyclic reference loops."
+    },
+    {
+      "id": 30,
+      "question": "In cryptography and secure networking (such as TLS/HTTPS), what distinguishes asymmetric encryption from symmetric encryption?",
+      "options": [
+        { "id": "a", "text": "Asymmetric encryption uses the same shared secret key for both encryption and decryption" },
+        { "id": "b", "text": "Asymmetric encryption utilizes a mathematically linked key pair (public key to encrypt, private key to decrypt), whereas symmetric encryption uses a single shared secret key" },
+        { "id": "c", "text": "Symmetric encryption is only used for digital signatures, never for bulk data transfer" },
+        { "id": "d", "text": "Asymmetric encryption is significantly faster than symmetric encryption and is used for large video streams" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Asymmetric encryption (e.g., RSA, ECC) uses a public key for encryption and a distinct private key for decryption. Symmetric encryption (e.g., AES, ChaCha20) uses the same secret key for both operations and is orders of magnitude faster. TLS uses asymmetric cryptography to securely negotiate a symmetric session key for high-speed bulk data encryption."
+    }
+  ]
+}
